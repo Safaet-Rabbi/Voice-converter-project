@@ -1,0 +1,82 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, rgba(17, 192, 157, 0.74), rgb(79, 104, 197));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.title {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.title:hover {
+    transform: scale(1.1) rotate(-5deg);
+    color: rgb(87, 87, 136);
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    border: 2px solid #f06;
+    transform: scale(1.05);
+    outline: none;
+}
+
+.speak-button {
+    padding: 10px 20px;
+    background: #f06;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.speak-button:hover {
+    background: #d0055a;
+    transform: scale(1.1);
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
